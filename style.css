@@ -184,6 +184,7 @@ body {
   text-decoration: underline;
   cursor: pointer; /* optional, makes it look clickable */
 }
+<<<<<<< HEAD
 
 .my-button {
   width: 100%;
@@ -287,3 +288,5 @@ body {
 .apple-btn span {
   color: #fffdfd; /* text color */
 }
+=======
+>>>>>>> d3e86c3bf6cc74c8fe347cf7de241055b3dd5645
