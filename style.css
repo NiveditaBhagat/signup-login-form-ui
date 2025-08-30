@@ -74,7 +74,11 @@ body {
   background-color: #2e2d2d;
   font-size: 1rem;
 }
-
+.name input:hover,
+.name input:focus {
+  border-color: #ffffff; /* or your desired color */
+  outline: none; /* removes default focus outline */
+}
 .email {
   display: flex;
 }
@@ -89,6 +93,11 @@ body {
   font-size: 1rem;
 }
 
+.email input:hover,
+.email input:focus {
+  border-color: #ffffff; /* or your desired color */
+  outline: none; /* removes default focus outline */
+}
 .password {
   display: flex;
 }
@@ -102,7 +111,11 @@ body {
   background-color: #2e2d2d;
   font-size: 1rem;
 }
-
+.password input:hover,
+.empasswordail input:focus {
+  border-color: #ffffff; /* or your desired color */
+  outline: none; /* removes default focus outline */
+}
 .terms {
   display: flex;
 
