@@ -1,0 +1,186 @@
+/* Make sure the page takes full height */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("form-image.jpg") no-repeat center center fixed;
+  background-size: 800%; /* ensures it covers the whole page */
+
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: rgb(17, 16, 16);
+  height: 79%;
+  width: 80%;
+  top: 8%;
+  margin: auto;
+  display: flex;
+  border-radius: 0.5%;
+}
+
+.form {
+  flex: 1; /* take 50% space if there are 2 children */
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+.image-bar {
+  flex: 1.3;
+  background: url("form-image.jpg");
+  margin: 8px;
+  border-radius: 2%;
+}
+
+.form h1 {
+  color: white;
+  margin-top: 20%;
+  font-weight: 400;
+
+  font-family: Arial, sans-serif;
+}
+
+.form p {
+  color: white;
+  font-size: 0.8rem;
+
+  font-weight: 100;
+  font-family: Arial, sans-serif;
+}
+
+.name {
+  display: flex;
+  gap: 17px; /* space between inputs */
+}
+
+.name input {
+  flex: 1; /* both inputs take equal space */
+  padding: 10px;
+  margin-top: 16px;
+  border: 1px solid #3d3c3c;
+  border-radius: 6px;
+  background-color: #2e2d2d;
+  font-size: 1rem;
+}
+
+.email {
+  display: flex;
+}
+
+.email input {
+  flex: 1; /* both inputs take equal space */
+  padding: 10px;
+  margin-top: 16px;
+  border: 1px solid #3d3c3c;
+  border-radius: 6px;
+  background-color: #2e2d2d;
+  font-size: 1rem;
+}
+
+.password {
+  display: flex;
+}
+
+.password input {
+  flex: 1; /* both inputs take equal space */
+  padding: 10px;
+  margin-top: 16px;
+  border: 1px solid #3d3c3c;
+  border-radius: 6px;
+  background-color: #2e2d2d;
+  font-size: 1rem;
+}
+
+.terms {
+  display: flex;
+
+  gap: 8px; /* space between checkbox & label */
+  margin-top: 12px;
+  align-items: center;
+}
+
+/*.terms input[type="checkbox"] {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid white;
+  border-radius: 2px; 
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+}
+
+
+.terms input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  color: #c70039; 
+}*/
+/* Primary: native control with accent-color */
+.terms input[type="checkbox"] {
+  accent-color: #f53c0e;
+}
+
+/* Fallback: if accent-color is NOT supported, create a custom checkbox */
+@supports not (accent-color: #000) {
+  .terms input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #6b6e6b;
+    border-radius: 3px;
+    position: relative;
+    background-color: rgb(17, 16, 16);
+    cursor: pointer;
+  }
+
+  .terms input[type="checkbox"]:checked {
+    background: #f53c0e;
+    border-color: #f53c0e;
+  }
+  .terms input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.terms label {
+  color: white;
+  font-size: 0.7rem;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.underline {
+  text-decoration: underline;
+  cursor: pointer; /* optional, makes it look clickable */
+}
